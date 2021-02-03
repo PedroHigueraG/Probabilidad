@@ -1,3 +1,27 @@
+.material-icons {
+    font-family: 'Material Icons';
+    font-weight: normal;
+    font-style: normal;
+    font-size: 24px;  /* Preferred icon size */
+    display: inline-block;
+    line-height: 1;
+    text-transform: none;
+    letter-spacing: normal;
+    word-wrap: normal;
+    white-space: nowrap;
+    direction: ltr;
+  
+    /* Support for all WebKit browsers. */
+    -webkit-font-smoothing: antialiased;
+    /* Support for Safari and Chrome. */
+    text-rendering: optimizeLegibility;
+  
+    /* Support for Firefox. */
+    -moz-osx-font-smoothing: grayscale;
+  
+    /* Support for IE. */
+    font-feature-settings: 'liga';
+  }
 *{
     box-sizing: border-box;
     margin: 0;
@@ -8,6 +32,8 @@ html{
     font-family: 'Roboto Mono', monospace;
 }
 .header{
+    position: fixed;
+    width: 100%;
     display: flex;
     background-color: #2F2D2E;
     height: 60px;
@@ -31,24 +57,31 @@ html{
     margin-right: 15px;
 }
 .aside{
-    width: 20%;
     height: 100vh;
+    width: 20%;
     background-color: #006494;
     color: #e8f1f2;
 }
-.aside .titulo-contenido{
-    font-size: 2rem;
-    padding: 15px;
-    padding-bottom: 0;
+.aside .contenido{
+    position: relative;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    top: 60px;
 }
-.lista-contenido{
-    padding: 20px;
+.aside .contenido .contenido-item:hover{
+    background-color: #13293d;
+    cursor: pointer;
 }
-.contenido {
-    padding-left: 20px;
+.contenido .contenido-item{
     font-size: 1.5rem;
+    padding: 15px 5px;
+    list-style: none;
+    align-items: center;
 }
-.contenido .enlace-contenido{
+.contenido .contenido-item .enlace-contenido{
+    display: flex;
     color: #e8f1f2;
-    text-decoration: none;
+    justify-content: space-between;
+
 }
