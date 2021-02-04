@@ -75,13 +75,24 @@ html{
 }
 .contenido .contenido-item{
     font-size: 1.5rem;
-    padding: 15px 5px;
+    
     list-style: none;
     align-items: center;
 }
 .contenido .contenido-item .enlace-contenido{
+    padding: 15px 5px;
     display: flex;
     color: #e8f1f2;
     justify-content: space-between;
+}
+.contenido .contenido-item #sub-seccion-1,#sub-seccion-2,#sub-seccion-3{
+    display: none;
+}
+.contenido-item .sub-seccion .sub-item{
+    background-color: #213f5c;
+    padding: 15px 5px;
+}
+.contenido-item .sub-seccion .sub-item:hover{
+    background-color: #13293d;;
 
 }
