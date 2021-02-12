@@ -30,6 +30,7 @@
 html{
     font-size: 62.5%;
     font-family: 'Roboto Mono', monospace;
+    scroll-behavior: smooth;
 }
 .header{
     position: fixed;
@@ -40,6 +41,7 @@ html{
     align-items: center;
     justify-content: space-between;
     font-weight: 500;
+    z-index: 20;
 }
 .header .logo{
     width: 45px;
@@ -57,14 +59,15 @@ html{
     margin-right: 15px;
 }
 .aside{
+    position: fixed;
     height: 100vh;
     width: 20%;
     background-color: #006494;
     color: #e8f1f2;
+    z-index: 10;
 }
 .aside .contenido{
     position: relative;
-    height: 100%;
     display: flex;
     flex-direction: column;
     top: 60px;
@@ -75,7 +78,6 @@ html{
 }
 .contenido .contenido-item{
     font-size: 1.5rem;
-    
     list-style: none;
     align-items: center;
 }
@@ -93,6 +95,80 @@ html{
     padding: 15px 5px;
 }
 .contenido-item .sub-seccion .sub-item:hover{
-    background-color: #13293d;;
-
+    background-color: #13293d;
+}
+.contenido-item li a{
+    text-decoration: none;
+    color: #e8f1f2;
+}
+main{
+    background-color: #e8f1f2;
+}
+.section{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-top: 60px;
+    position: relative;
+    left: 20%;
+    height: 100vh;
+    width: 80%;
+}
+.section h1{
+    margin: 15px;
+    text-align: center;
+    font-size: 2.5rem;
+}
+.section p{
+    font-size: 1.7rem;
+    width: 70%;
+    margin: 10px auto;
+    text-align: justify;
+}
+.section .figure{
+    margin: 10px;
+    padding: 10px;
+    text-align: center;
+}
+.section .figure img{
+    width: 600px;
+}
+.section .ecuations{
+    font-size: 1.5rem;
+    background-color: #00659473;
+    width: 300px;
+    margin: 0 auto;
+    padding: 15px;
+    border-radius: 10px;
+}
+.section .ecuations ul{
+    list-style: none;
+    text-align: center;
+}
+.section .example{
+    font-size: 1.5rem;
+    background-color: #00659473;
+    width:  350px;
+    margin: 0 auto;
+    padding: 15px;
+    border-radius: 10px;
+}
+.section .example form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.example form .input-num{
+    padding: 10px;
+    margin: 5px;
+    border: none;
+    border-radius: 5px;
+}
+.example form .input-but{
+    padding: 10px;
+    margin: 5px;
+    border: none;
+    border-radius: 5px;
+    background-color: #006494;
+    color: #e8f1f2;
 }
